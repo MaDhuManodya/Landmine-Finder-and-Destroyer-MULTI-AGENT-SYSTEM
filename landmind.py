@@ -97,10 +97,10 @@ class LandmineModel(Model):
         self.destroyed_landmines = 0
 
         # Load images
-        self.landmine_image = pygame.image.load('landmine.jpg')
-        self.finder_image = pygame.image.load('finder.jpg')
-        self.destroyer_image = pygame.image.load('destroyer.jpg')
-        self.scout_image = pygame.image.load('scout.jpg')
+        self.landmine_image = pygame.image.load('Images\landmine.jpg')
+        self.finder_image = pygame.image.load('Images\finder.jpg')
+        self.destroyer_image = pygame.image.load('Images\destroyer.jpg')
+        self.scout_image = pygame.image.load('Images\scout.jpg')
 
         # Resize images to fit in the grid cells
         self.landmine_image = pygame.transform.scale(self.landmine_image, (CELL_SIZE, CELL_SIZE))
@@ -169,7 +169,7 @@ def start():
     clock = pygame.time.Clock()
 
     # Load background image
-    background_image = pygame.image.load('background.jpg')
+    background_image = pygame.image.load('Images\background.jpg')
     background_image = pygame.transform.scale(background_image, (SCREEN_SIZE, SCREEN_HEIGHT))
 
     model = LandmineModel()
